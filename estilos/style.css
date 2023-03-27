@@ -1,0 +1,304 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+	--cor0: #343a40;
+	--cor1: #3b3a4d94;
+	--cor2: #424757;
+	--cor3: #425257;
+	--cor4: #3a4d4c2f;
+	--cor5:#4744A6;
+    --cor6: #42475779;
+	;
+
+	
+	--fonte-titulo: 'Bebas neue', cursive;
+	--fonte-destaque: 'Source Sans Pro', sans-serif;
+	--fonte-dwld: 'Anton', sans-serif;
+}
+
+body{
+    background-color: var(--cor4);
+    font-family: var(--fonte-padrao);
+}
+    /*Configuração da header e menu superior*/
+
+    header{
+            display: flex;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            font-family: 'Bebas Neue', cursive;
+            background-image: linear-gradient(to bottom, var(--cor0), var(--cor2));
+            color: #fff;
+            align-items: center; /*para centralizar verticalmente*/
+            justify-content: space-between; /*para distribuir o espaço entre o título e o menu.*/
+            z-index: 1;
+            padding: 10px;
+}
+
+/*Configuração do H1 do topo*/
+header h1 {
+    font-size: 1.8em;
+    padding: 10px;
+    color: white;
+    margin: 0;
+}
+
+header h1 a{
+    text-decoration: none;
+}
+
+/*Configuração para retirar o aspecto de lista do menu*/
+.nav-top ul{
+    list-style: none;
+}
+
+/*Configuração para colocar todos os itens em linha e dar uma margin de 10px para eles*/
+.nav-top li {
+    display: inline-block;
+    margin-right: 10px;
+}
+/*Configuração de cor espaçamento interno e tirar as linhas*/
+.nav-top a {
+    padding-right: 10px;
+    font-size: 1.1em;
+    display: block;
+    padding: 5px;
+    color: #b6b6b6;
+    text-decoration: none;
+}
+
+.nav-top a:hover{
+    background-color: #b6b6b6a6;
+    color: white;
+    border-radius: 3px;
+    transition: 1s;
+}
+
+a:visited{
+    color: white; /* Define a cor do link visitado como preto */
+    text-decoration: none; /* Remove a decoração de texto padrão, como sublinhado */
+}
+
+.container {
+    width: 100%;
+    min-width: 459px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+.sidebar {
+    bottom: 20px;
+    max-width: 250px;
+    width: 20%;
+    float: left;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    height: 100%;
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor0));
+    overflow-y: auto;
+  }
+  
+  .foto-perfil {
+    display: block;
+    margin: 15px 0px 30px 27px;
+    max-width: 200px;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .foto-perfil:hover {
+    transform: scale(1.1);
+  }
+
+  .sidebar a {
+    font-size: 1em;
+    float: left;
+    font-family: var(--fonte-destaque);
+    color: #b6b6b6;
+    text-decoration: none;
+    display: block;
+    padding: 30px;
+    text-align: justify;
+  }
+
+  .sidebar a:hover{
+    color: white;
+    font-size: 1.2em;
+    text-decoration: dashed;
+  }
+
+  .logout-button {
+    font-family: var(--fonte-destaque);
+    display: block;
+    position: fixed;
+    top: 90%;
+    left: 6%;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 10px;
+  }
+
+  .logout-button:hover{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.377);
+    transition: 1s;
+  }
+
+  .logout-button::before{
+    content: '\1F5F4';
+  }
+
+  /*Sidebar para telas menores*/
+  @media(max-width: 850px){
+    .sidebar a{
+        font-size: 0.7em;
+        padding: 15px;
+        margin-right: 20px;
+    }
+
+    .sidebar a:hover{
+        font-size: 0.8em;
+    }
+
+    .logout-button{
+        font-size: 0.6em;
+        background-size: 10%;
+    }
+  }
+
+  .main-conteudo{
+        height: 100%;
+        width: 75%;
+        float: left;
+    }
+
+    main{
+      margin: auto;
+        padding-bottom: 70px;
+        position: relative;
+        top: 90px;
+        max-width: 1200px;
+        margin-left: 250px;
+    }
+
+    @media(max-width: 700px){
+        main{
+            margin-left: 95px;
+        }
+    }
+    
+    .principal{
+        font-family: var(--fonte-titulo);
+        text-align: center;
+        padding: 20px;
+        background-image: linear-gradient(to right, var(--cor6), transparent);
+        border-radius: 5px;
+    }
+
+    .logo{
+        display: block;
+        text-align: center;
+        padding: 20px;
+    }
+
+    main h2{
+        font-size: 1.9em;
+        font-family: var(--fonte-titulo);
+        padding-bottom: 15px;
+        text-align: center;
+    }
+
+    .conteudo-principal {
+        margin-bottom: 30px;
+        border-radius: 6px;
+        padding:20px;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.178);
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      
+      .carrosel-img {
+        height: 80%;
+        padding-top: 40px;
+        flex-grow: 1;
+        flex-basis: 40%;
+        text-align: left;
+      }
+      
+      .carrosel-img img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      .eventos {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.9em;
+        padding: 40px;
+        flex-grow: 1;
+        flex-basis: 40%;
+        text-align: justify;
+        line-height: 1.5em;
+      }
+      
+      @media screen and (max-width: 850px) {
+        .conteudo-principal {
+          flex-direction: column;
+          align-items: center;
+        }
+        .carrosel-img, .eventos {
+          flex-basis: 100%;
+          text-align: center;
+          margin-bottom: 1em;
+        }
+      }
+    .download{
+        display: block;
+        margin-bottom: 40px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 6px;
+        box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.096)
+    }
+
+    .download h2 {
+        padding: 15px 0 5px 0;
+    }
+
+    .download p{
+        padding: 0px 0px 20px 0px;
+        text-align: center;
+        font-family: var(--fonte-destaque);
+    }
+
+    .download-button{
+        margin: 20px;
+        padding: 10px;
+        background-color: var(--cor5);
+        color: rgba(255, 255, 255, 0.521);
+        border-radius: 8px;
+        text-decoration: none;
+    }
+
+    .download a:hover{
+        background-color: blue;
+        color: white;
+        transition: 0.5s;
+    }
